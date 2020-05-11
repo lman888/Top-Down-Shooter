@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 414807339}
   - component: {fileID: 414807338}
   - component: {fileID: 414807342}
-  - component: {fileID: 414807341}
+  - component: {fileID: 414807337}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -141,6 +141,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &414807337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414807336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b4003f5240d944787aad3430ce6ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerOBJ: {fileID: 0}
+  m_walkSpeed: 5
+  m_runSpeed: 8
+  m_rotationSpeed: 450
 --- !u!23 &414807338
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -203,22 +219,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &414807341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414807336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b4003f5240d944787aad3430ce6ba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_playerOBJ: {fileID: 0}
-  m_walkSpeed: 5
-  m_runSpeed: 8
-  m_rotationSpeed: 450
 --- !u!143 &414807342
 CharacterController:
   m_ObjectHideFlags: 0
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d20f669d4f538489143d827f116758, type: 3}
+  m_Script: {fileID: 11500000, guid: ab483e511e9356746a3cacd349922706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1047567116

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public Object m_bullet;
-    public Object m_bulletSpawner;
+    public Transform m_spawn;
+
+    public float m_shootDistance = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -13,22 +14,19 @@ public class Shooting : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShootBullets()
     {
-        ShootBullets();
-    }
+        Ray m_ray = new Ray(m_spawn.position, m_spawn.forward);
 
-    void ShootBullets()
-    {
-        if (Input.GetMouseButtonDown(0))
+        RaycastHit m_hit;
+
+        //Shoots out a Ray and informs us of what we hit
+        if (Physics.Raycast(m_ray, out m_hit))
         {
-            print("Left Click down");
+            m_shootDistance = m_hit.distance;
         }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            print("Right Click down");
-        }
+        Debug.DrawRay(m_ray.origin, m_ray.direction * m_shootDistance, Color.blue);
+
     }
 }
